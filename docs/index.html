@@ -7,5 +7,31 @@
 </head>
 <body>
     <h1>NEPSE Scraper Documentation</h1>
+
+    <h2>API Endpoints</h2>
+
+    <h3>Get Stock Data by Symbol</h3>
+    <p><strong>Route:</strong> <code>/:symbol</code></p>
+    <p><strong>Method:</strong> GET</p>
+    <p><strong>Description:</strong> Retrieves the latest stock data for a specific symbol.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><code>symbol</code> (URL Parameter, required): The stock symbol (e.g., 'NABIL'). Case-insensitive, will be redirected to uppercase.</li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <pre><code>GET /NABIL</code></pre>
+
+    <h3>Get List of Top Stocks</h3>
+    <p><strong>Route:</strong> <code>/</code></p>
+    <p><strong>Method:</strong> GET</p>
+    <p><strong>Description:</strong> Retrieves a list of top stocks based on specified criteria.</p>
+    <p><strong>Parameters:</strong></p>
+    <ul>
+        <li><code>col</code> (Query Parameter, optional): The column to sort by (e.g., 'change', 'volume').</li>
+        <li><code>num</code> (Query Parameter, optional): The number of results to return (default: 10).</li>
+    </ul>
+    <p><strong>Example:</strong></p>
+    <pre><code>GET /?col=change&num=5</code></pre>
+
 </body>
 </html>
